@@ -14,15 +14,13 @@ Object.keys(temp).map(key=>{
  useEffect(()=>{
     getUsers();
     },[])
-    function showHide(event) {
-      if(buttonText===true ){
-        document.getElementById(event.target.id).innerHTML="View Details"
-        setButtonText(false)
+    function showHide(event) {   
+      var text= document.getElementById(event.target.id).innerHTML
+      if(text==='View Details'){
+        document.getElementById(event.target.id).innerHTML='Hide Details';
       }
-      if(buttonText===false ){
-        setButtonText(true)
-        document.getElementById(event.target.id).innerHTML="Hide Details"
-
+      if(text==='Hide Details'){
+        document.getElementById(event.target.id).innerHTML='View Details';
       }
     }
     
